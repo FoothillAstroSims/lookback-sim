@@ -123,28 +123,23 @@ export default class MainView extends React.Component {
                 <svg width={WIDTH} height={HEIGHT}>
                     <rect width={"100%"} height={"100%"} fill={"black"} />
                     <g>
-                        <image x={120} y={160} href={"./img/distance-line.png"} height={250} width={250} />
-                        <text x={190} y={320} fill={"aquamarine"}>3000 Light Years</text>
-                        <image x={250} y={25} href={"./img/puzzled-man.jpg"} height={250} width={250} />
-                        {/*<image x={100} y={160} href={"./img/star.png"} height={50} width={50} />*/}
-                        {/*<image x={345} y={48} href={"./img/star.png"} height={50} width={50} />*/}
-                        {/* <text x={center - 60} y={320} fill={"aqua"}>{Math.round(this.time)} Light Years</text> */}
+                        <text x={center - 60} y={320} fill={"aqua"}>{Math.round(this.time)} Light Years</text>
                         <g ref={this.ref} />
                         {/*<image x={250} y={25} href={"./img/puzzled-man.jpg"} height={250} width={250} />*/}
 
-                        {/* Horizontal
+                        Horizontal
                         <line x1={start} x2={end} y1={290} y2={290} stroke={'red'} />
                         Vertical Left
                         <line x1={start} x2={start} y1={290} y2={280} stroke={'red'} />
                         Vertical Right
                         <line x1={end} x2={end} y1={290} y2={280} stroke={'red'} />
                         Center
-                        <line x1={center} x2={center} y1={290} y2={300} stroke={'red'} /> */}
+                        <line x1={center} x2={center} y1={290} y2={300} stroke={'red'} />
 
                         <g> {this.getStars(100, 160)} </g>
                         {/*<g> {this.getStars(345, 48)} </g>*/}
 
-                        <circle cx={125} cy={186} r={radiusCircle} stroke={"#ff1d58"} fill={"none"} />
+                        <circle cx={125} cy={186} r={radiusCircle} stroke={"red"} fill={"none"} />
                     </g>
                 </svg>
             </div>
