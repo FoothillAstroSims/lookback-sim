@@ -39,7 +39,7 @@ export default class SliderIcon extends React.Component {
             .attr('transform', `translate(${yearScale(initialYear) - this.iconWidth}, 5)`)
             .attr('d', 'M0 20 L 25 20 L 12.5 45 L 0 20 Z')
             .attr('id', 'myIcon')
-            .attr('fill', "lightpink")
+            .attr('fill', '#d0bdf4')
             .attr('stroke', "black")
             .call(handleDrag);
     }
@@ -95,11 +95,11 @@ export default class SliderIcon extends React.Component {
         const textPosition = yearScale(this.props.startTime) - textWidth;
         return <React.Fragment>
             <g ref={this.ref} />
-            <text x={textPosition} y={18}>SN Occurs</text>
-            <line x1={SNOccursX} y1={25} x2={SNOccursX} y2={50} strokeWidth={1} stroke={"red"} visibility={SNOccursVisible} />
+            <text x={textPosition} y={18} fill={"white"}>SN Occurs</text>
+            <line x1={SNOccursX} y1={25} x2={SNOccursX} y2={50} strokeWidth={1} stroke={"#ff1d58"} visibility={SNOccursVisible} />
 
-            <text x={SNObservedX - textWidth} y={18} visibility={SNObservedVisible}>SN Observed</text>
-            <line x1={SNObservedX} y1={25} x2={SNObservedX} y2={50} strokeWidth={1} stroke={"red"} visibility={SNObservedVisible} />
+            <text x={SNObservedX - textWidth} y={18} visibility={SNObservedVisible} fill={"white"}>SN Observed</text>
+            <line x1={SNObservedX} y1={25} x2={SNObservedX} y2={50} strokeWidth={1} stroke={"#ff1d58"} visibility={SNObservedVisible} />
         </React.Fragment>
     }
 }
